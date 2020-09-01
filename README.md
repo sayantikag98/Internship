@@ -2,11 +2,11 @@
 # Anomaly detection in time series data of manufacturing parts
 
 
-The workflow of the internship as has been followed by me are as follows:
+The workflow for this project were as follows:
 
-•	A synthetic dataset was generated taking the values of different parameters like spindle load, spindle speed, spindle temperature, current, flow rate etc. at timestamp value of 1 second following the given parameter range. (As the original time series data from machines were not available due the ongoing pandemic situation.)
+•	A synthetic dataset was generated taking the values of different parameters like spindle load, spindle speed, spindle temperature, current, flow rate etc. at timestamp value of 1 second following the given parameter range. (As the original time series data from machines were not available due the ongoing pandemic situation.) The code for this can be found in #Final_intern_data.ipynb file.
 
-•	Next the time series data was stored in MongoDB.
+•	Next the time series data was stored in MongoDB. This code can be found in MongoDB Intern 31.07.20.ipynb file.
 
 
 •	Then the analysis of the data was done as follows:
@@ -34,8 +34,10 @@ The workflow of the internship as has been followed by me are as follows:
 	Then to determine the optimal number of clusters for the clustering algorithm used an elbow plot which showed the elbow point to be at 3 and silhouette score graph which showed peak at 2 so, 2 was used as the value of n_cluster.
 	Then different clustering techniques like k-means clustering, mini-batch kmeans, dbscan, gaussian mixture, Bayesian gaussian mixture, agglomerative clustering and affinity propagation were used. The implementation was done using sklearn library. These results were compared using Silhouette score, Calinski-Harabasz Index and Davies-Bouldin Index . These metrics were chosen because it did not require the knowledge of ground truth. The analysis result showed best performance by agglomerative clustering  on the basis of silhouette score. The clusters were non-overlapping and prominent for most of the algorithms. But the issue was that the two clusters were of almost equal size. 
 
-	Then the issue of imbalanced dataset were handled using random oversampling of the minority class, random downsampling of the majority class, Tomek link, SMOTE and combination of SMOTE and Tomek link. Then the dataset was divided into train, test and validation. Then a simple Deep learning sequential model was built using keras but the result showed that it was a case of over-fitting. So then k-fold cross-validation and repeated k-fold cross-validation was used to address this issue.  Then one conv1D layer followed by one max pool layer was introduced and the result of which was fed into a LSTM layer. The accuracy was good for the testing set. Currently thinking of improving this model and also to apply autoencoder as an approach here.
+	Then the issue of imbalanced dataset were handled using random oversampling of the minority class, random downsampling of the majority class, Tomek link, SMOTE and combination of SMOTE and Tomek link. Finally used the combination of SMOTE and Tomek link. Then the dataset was divided into train, test and validation dataset. Then a simple deep learning sequential model was built using keras but the result showed that it was a case of over-fitting. So then k-fold cross-validation and repeated k-fold cross-validation was used to address this issue.  Then one conv1D layer followed by one max pool layer was introduced and the result of which was fed into a LSTM layer. The accuracy was good for the testing set. Currently thinking of improving this model's accuracy and also to apply autoencoder as an approach here.
 
 
 	Finally, the classification techniques were used like Decision tree, SVM, and ensemble methods like random forest, adaboost and gradient boosting. For hyperparameter tuning GridSearch CV was used and the results were compared with the help of precision, recall, f1, confusion matrix, etc. For repeated k-fold cross validation with n-split of 2 and n-repeats of 2 four combinations were obtained and among them SVM always performed better than other classifiers based on f1 score.
+
+All this code can be found in ML_final_29_07_20.ipynb file.
 

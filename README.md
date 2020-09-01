@@ -6,7 +6,7 @@ The workflow for this project were as follows:
 
 •	A synthetic dataset was generated taking the values of different parameters like spindle load, spindle speed, spindle temperature, current, flow rate etc. at timestamp value of 1 second following the given parameter range. (As the original time series data from machines were not available due the ongoing pandemic situation.) The code for this can be found in #Final_intern_data.ipynb file.
 
-•	Next the time series data was stored in MongoDB. This code can be found in MongoDB Intern 31.07.20.ipynb file.
+•	Next the time series data was stored in MongoDB. This code can be found in #MongoDB Intern 31.07.20.ipynb file.
 
 
 •	Then the analysis of the data was done as follows:
@@ -40,5 +40,5 @@ The workflow for this project were as follows:
 
 	Finally, the classification techniques were used like Decision tree, SVM, and ensemble methods like random forest, adaboost and gradient boosting. For hyperparameter tuning GridSearch CV was used and the results were compared with the help of precision, recall, f1, confusion matrix, etc. For repeated k-fold cross validation with n-split of 2 and n-repeats of 2 four combinations were obtained and among them SVM always performed better than other classifiers based on f1 score.
 
-All this code can be found in ML_final_29_07_20.ipynb file.
+All this code can be found in #ML_final_29_07_20.ipynb file.
 

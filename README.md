@@ -1,4 +1,3 @@
-# Virtual Internship
 # Anomaly detection in time series data of manufacturing parts
 
 
